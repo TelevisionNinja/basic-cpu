@@ -3,27 +3,27 @@ A basic MIPS-like single cycle CPU in VHDL
 
 ## Full Diagram
 
-<img src="./images/program_counter.png" style="background-color:white;" />
+<img src="./images/program_counter.jpg" style="background-color:white;" />
 
 ## I Type Instruction
 
-<img src="./images/i_type.png" style="background-color:white;" />
+<img src="./images/i_type.jpg" style="background-color:white;" />
 
 ## R Type Instruction
 
-<img src="./images/r_type.png" style="background-color:white;" />
+<img src="./images/r_type.jpg" style="background-color:white;" />
 
 ## SLT Instruction
 
-<img src="./images/slt.png" style="background-color:white;" />
+<img src="./images/slt.jpg" style="background-color:white;" />
 
 ## LW Instruction
 
-<img src="./images/lw.png" style="background-color:white;" />
+<img src="./images/lw.jpg" style="background-color:white;" />
 
 ## SW Instruction
 
-<img src="./images/sw.png" style="background-color:white;" />
+<img src="./images/sw.jpg" style="background-color:white;" />
 
 ## Test Results
 | Instruction      | op | r_d | r_s | r_t/immediate | Value (r_d)                        |
