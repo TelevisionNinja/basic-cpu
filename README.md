@@ -2,21 +2,27 @@
 A basic MIPS-like single cycle CPU in VHDL
 
 ## Full Diagram
+
 <img src="./images/program_counter.png" style="background-color:white;" />
 
 ## I Type Instruction
+
 <img src="./images/i_type.png" style="background-color:white;" />
 
 ## R Type Instruction
+
 <img src="./images/r_type.png" style="background-color:white;" />
 
 ## SLT Instruction
+
 <img src="./images/slt.png" style="background-color:white;" />
 
 ## LW Instruction
+
 <img src="./images/lw.png" style="background-color:white;" />
 
 ## SW Instruction
+
 <img src="./images/sw.png" style="background-color:white;" />
 
 ## Test Results
@@ -38,4 +44,4 @@ A basic MIPS-like single cycle CPU in VHDL
 | SUB R11, R10, R7 | 1  | B   | A   | 7             | \-2                                |
 | SW R11, 5(R8)    | C  | B   | 8   | 5             | M[10] = -2 </br> Value of R11 = -2 |
 
-![waveforms](./images/waveforms.png)
+![waveforms](./images/waveform_results.png)
