@@ -1,0 +1,50 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "secureip" -o "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214_Test_isim_beh.exe" -prj "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214_Test_beh.prj" "work.CPU_2214_Test" 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/or_gate.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/MUX31.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/full_adder.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/and_gate.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/ALU.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Signextend.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Registers.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/PC_REG.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/mux3_1.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/mux2_1.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Memory.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Control.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/ALU_16Bit.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214.vhd" into library work
+Parsing VHDL file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214_Test.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package textio
+Compiling architecture behavioral of entity PC_REG [pc_reg_default]
+Compiling architecture beh of entity Memory [\Memory("Instr.txt","out.txt")(1...]
+Compiling architecture syn of entity Control [control_default]
+Compiling architecture syn of entity Registers [registers_default]
+Compiling architecture syn of entity Signextend [signextend_default]
+Compiling architecture behavioral of entity mux2_1 [\mux2_1(4)\]
+Compiling architecture behavioral of entity mux2_1 [\mux2_1(16)\]
+Compiling architecture behavior of entity full_adder [full_adder_default]
+Compiling architecture behavior of entity and_gate [and_gate_default]
+Compiling architecture behavior of entity or_gate [or_gate_default]
+Compiling architecture behavioral of entity MUX31 [mux31_default]
+Compiling architecture behavior of entity ALU [alu_default]
+Compiling architecture behavior of entity ALU_16Bit [alu_16bit_default]
+Compiling architecture beh of entity Memory [\Memory("in.txt","out.txt")(1,6,...]
+Compiling architecture behavioral of entity mux3_1 [\mux3_1(16)\]
+Compiling architecture behavioral of entity CPU_2214 [cpu_2214_default]
+Compiling architecture mixed of entity cpu_2214_test
+Time Resolution for simulation is 1ps.
+Waiting for 6 sub-compilation(s) to finish...
+Compiled 38 VHDL Units
+Built simulation executable E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214_Test_isim_beh.exe
+Fuse Memory Usage: 36792 KB
+Fuse CPU Usage: 467 ms

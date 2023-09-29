@@ -1,0 +1,5 @@
+set -tmpdir "/home/askc037/Desktop/CPU_2214/CPU_2214/xst/projnav.tmp"
+set -xsthdpdir "/home/askc037/Desktop/CPU_2214/CPU_2214/xst"
+elaborate
+-ifn mux3_1.prj
+-ifmt mixed

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214_Test.xst" -ofn "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214_Test.syr" 

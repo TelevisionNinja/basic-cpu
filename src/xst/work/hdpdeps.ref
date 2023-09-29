@@ -1,0 +1,110 @@
+V3 59
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/ALU.vhd 2012/10/16.19:51:20 P.20131013
+EN work/ALU 1414993646 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/ALU.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/ALU/behavior 1414993647 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/ALU.vhd \
+      EN work/ALU 1414993646 CP full_adder CP and_gate CP or_gate CP MUX31
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/ALU_16Bit.vhd 2012/10/16.20:08:18 P.20131013
+EN work/ALU_16Bit 1414993660 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/ALU_16Bit.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/ALU_16Bit/behavior 1414993661 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/ALU_16Bit.vhd \
+      EN work/ALU_16Bit 1414993660 CP ALU
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/and_gate.vhd 2012/10/07.18:38:32 P.20131013
+EN work/and_gate 1414993640 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/and_gate.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/and_gate/behavior 1414993641 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/and_gate.vhd \
+      EN work/and_gate 1414993640
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Control.vhd 2014/11/02.23:22:43 P.20131013
+EN work/Control 1414993652 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Control.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Control/syn 1414993653 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Control.vhd \
+      EN work/Control 1414993652
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214.vhd 2014/11/02.23:35:35 P.20131013
+EN work/CPU_2214 1414993664 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/CPU_2214/Behavioral 1414993665 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214.vhd \
+      EN work/CPU_2214 1414993664 CP PC_REG CP Memory CP Control CP Registers \
+      CP Signextend CP mux2_1 CP ALU_16Bit CP mux3_1
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214_Test.vhd 2014/11/02.23:32:00 P.20131013
+EN work/CPU_2214_Test 0 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214_Test.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/CPU_2214_Test/mixed 0 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214_Test.vhd \
+      EN work/CPU_2214_Test 0 CP work/CPU_2214
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/full_adder.vhd 2012/10/07.18:38:24 P.20131013
+EN work/full_adder 1414993638 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/full_adder.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/full_adder/behavior 1414993639 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/full_adder.vhd \
+      EN work/full_adder 1414993638
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Memory.vhd 2014/11/02.22:41:12 P.20131013
+EN work/Memory 1414993650 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Memory.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
+      PB std/TEXTIO 1381692176
+AR work/Memory/beh 1414993651 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Memory.vhd \
+      EN work/Memory 1414993650
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/mux2_1.vhd 2012/10/20.14:31:00 P.20131013
+EN work/mux2_1 1414993658 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/mux2_1.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/mux2_1/Behavioral 1414993659 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/mux2_1.vhd \
+      EN work/mux2_1 1414993658
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/MUX31.vhd 2012/10/07.18:40:10 P.20131013
+EN work/MUX31 1414993644 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/MUX31.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/MUX31/Behavioral 1414993645 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/MUX31.vhd \
+      EN work/MUX31 1414993644
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/mux3_1.vhd 2012/10/20.14:31:40 P.20131013
+EN work/mux3_1 1414993662 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/mux3_1.vhd \
+      PB ieee/std_logic_1164 1381692176
+AR work/mux3_1/Behavioral 1414993663 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/mux3_1.vhd \
+      EN work/mux3_1 1414993662
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/or_gate.vhd 2012/10/07.18:40:46 P.20131013
+EN work/or_gate 1414993642 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/or_gate.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/or_gate/behavior 1414993643 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/or_gate.vhd \
+      EN work/or_gate 1414993642
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/PC_REG.vhd 2012/10/20.15:52:34 P.20131013
+EN work/PC_REG 1414993648 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/PC_REG.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/PC_REG/Behavioral 1414993649 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/PC_REG.vhd \
+      EN work/PC_REG 1414993648
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Registers.vhd 2012/10/19.15:29:34 P.20131013
+EN work/Registers 1414993654 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Registers.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Registers/syn 1414993655 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Registers.vhd \
+      EN work/Registers 1414993654
+FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Signextend.vhd 2012/10/20.14:27:46 P.20131013
+EN work/Signextend 1414993656 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Signextend.vhd \
+      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/Signextend/syn 1414993657 \
+      FL E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Signextend.vhd \
+      EN work/Signextend 1414993656

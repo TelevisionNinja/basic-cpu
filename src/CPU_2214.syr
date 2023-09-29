@@ -1,0 +1,991 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: CPU_2214.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPU_2214.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPU_2214"
+Output Format                      : NGC
+Target Device                      : xc5vlx30-3-ff324
+
+---- Source Options
+Top Module Name                    : CPU_2214
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Off
+Reduce Control Sets                : Off
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/full_adder.vhd" in Library work.
+Architecture behavior of Entity full_adder is up to date.
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/and_gate.vhd" in Library work.
+Architecture behavior of Entity and_gate is up to date.
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/or_gate.vhd" in Library work.
+Architecture behavior of Entity or_gate is up to date.
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/MUX31.vhd" in Library work.
+Architecture behavioral of Entity mux31 is up to date.
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/ALU.vhd" in Library work.
+Architecture behavior of Entity alu is up to date.
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/PC_REG.vhd" in Library work.
+Architecture behavioral of Entity pc_reg is up to date.
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Memory.vhd" in Library work.
+Architecture beh of Entity memory is up to date.
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Control.vhd" in Library work.
+Architecture syn of Entity control is up to date.
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Registers.vhd" in Library work.
+Architecture syn of Entity registers is up to date.
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Signextend.vhd" in Library work.
+Architecture syn of Entity signextend is up to date.
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/mux2_1.vhd" in Library work.
+Architecture behavioral of Entity mux2_1 is up to date.
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/ALU_16Bit.vhd" in Library work.
+Architecture behavior of Entity alu_16bit is up to date.
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/mux3_1.vhd" in Library work.
+Architecture behavioral of Entity mux3_1 is up to date.
+Compiling vhdl file "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214.vhd" in Library work.
+Architecture behavioral of Entity cpu_2214 is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <CPU_2214> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <PC_REG> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <Memory> in library <work> (architecture <beh>) with generics.
+	INPUT = "Instr.txt"
+	OUTPUT = "out.txt"
+
+Analyzing hierarchy for entity <Control> in library <work> (architecture <syn>).
+
+Analyzing hierarchy for entity <Registers> in library <work> (architecture <syn>).
+
+Analyzing hierarchy for entity <Signextend> in library <work> (architecture <syn>).
+
+Analyzing hierarchy for entity <mux2_1> in library <work> (architecture <behavioral>) with generics.
+	WIDTH = 4
+
+Analyzing hierarchy for entity <mux2_1> in library <work> (architecture <behavioral>) with generics.
+	WIDTH = 16
+
+Analyzing hierarchy for entity <ALU_16Bit> in library <work> (architecture <behavior>).
+
+Analyzing hierarchy for entity <Memory> in library <work> (architecture <beh>) with generics.
+	INPUT = "in.txt"
+	OUTPUT = "out.txt"
+
+Analyzing hierarchy for entity <mux3_1> in library <work> (architecture <behavioral>) with generics.
+	WIDTH = 16
+
+Analyzing hierarchy for entity <ALU> in library <work> (architecture <behavior>).
+
+Analyzing hierarchy for entity <full_adder> in library <work> (architecture <behavior>).
+
+Analyzing hierarchy for entity <and_gate> in library <work> (architecture <behavior>).
+
+Analyzing hierarchy for entity <or_gate> in library <work> (architecture <behavior>).
+
+Analyzing hierarchy for entity <MUX31> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <CPU_2214> in library <work> (Architecture <behavioral>).
+Entity <CPU_2214> analyzed. Unit <CPU_2214> generated.
+
+Analyzing Entity <PC_REG> in library <work> (Architecture <behavioral>).
+Entity <PC_REG> analyzed. Unit <PC_REG> generated.
+
+Analyzing generic Entity <Memory.1> in library <work> (Architecture <beh>).
+	INPUT = "Instr.txt"
+	OUTPUT = "out.txt"
+WARNING:Xst:790 - "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Memory.vhd" line 94: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <mem> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Memory.vhd" line 102: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <mem> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <Memory.1> analyzed. Unit <Memory.1> generated.
+
+Analyzing Entity <Control> in library <work> (Architecture <syn>).
+Entity <Control> analyzed. Unit <Control> generated.
+
+Analyzing Entity <Registers> in library <work> (Architecture <syn>).
+Entity <Registers> analyzed. Unit <Registers> generated.
+
+Analyzing Entity <Signextend> in library <work> (Architecture <syn>).
+Entity <Signextend> analyzed. Unit <Signextend> generated.
+
+Analyzing generic Entity <mux2_1.1> in library <work> (Architecture <behavioral>).
+	WIDTH = 4
+Entity <mux2_1.1> analyzed. Unit <mux2_1.1> generated.
+
+Analyzing generic Entity <mux2_1.2> in library <work> (Architecture <behavioral>).
+	WIDTH = 16
+Entity <mux2_1.2> analyzed. Unit <mux2_1.2> generated.
+
+Analyzing Entity <ALU_16Bit> in library <work> (Architecture <behavior>).
+Entity <ALU_16Bit> analyzed. Unit <ALU_16Bit> generated.
+
+Analyzing Entity <ALU> in library <work> (Architecture <behavior>).
+Entity <ALU> analyzed. Unit <ALU> generated.
+
+Analyzing Entity <full_adder> in library <work> (Architecture <behavior>).
+Entity <full_adder> analyzed. Unit <full_adder> generated.
+
+Analyzing Entity <and_gate> in library <work> (Architecture <behavior>).
+Entity <and_gate> analyzed. Unit <and_gate> generated.
+
+Analyzing Entity <or_gate> in library <work> (Architecture <behavior>).
+Entity <or_gate> analyzed. Unit <or_gate> generated.
+
+Analyzing Entity <MUX31> in library <work> (Architecture <behavioral>).
+Entity <MUX31> analyzed. Unit <MUX31> generated.
+
+Analyzing generic Entity <Memory.2> in library <work> (Architecture <beh>).
+	INPUT = "in.txt"
+	OUTPUT = "out.txt"
+WARNING:Xst:790 - "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Memory.vhd" line 94: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <mem> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+WARNING:Xst:790 - "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Memory.vhd" line 102: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1433 - Contents of array <mem> may be accessed with an index that exceeds the array size. This could cause simulation mismatch.
+Entity <Memory.2> analyzed. Unit <Memory.2> generated.
+
+Analyzing generic Entity <mux3_1> in library <work> (Architecture <behavioral>).
+	WIDTH = 16
+Entity <mux3_1> analyzed. Unit <mux3_1> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <PC_REG>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/PC_REG.vhd".
+    Found 16-bit register for signal <Output>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <PC_REG> synthesized.
+
+
+Synthesizing Unit <Memory_1>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Memory.vhd".
+WARNING:Xst:647 - Input <mem_dump> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <addr<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Register <mem<10>> equivalent to <mem<0>> has been removed
+    Register <mem<11>> equivalent to <mem<0>> has been removed
+    Register <mem<12>> equivalent to <mem<0>> has been removed
+    Register <mem<13>> equivalent to <mem<0>> has been removed
+    Register <mem<14>> equivalent to <mem<0>> has been removed
+    Register <mem<15>> equivalent to <mem<0>> has been removed
+    Register <mem<1>> equivalent to <mem<0>> has been removed
+    Register <mem<2>> equivalent to <mem<0>> has been removed
+    Register <mem<3>> equivalent to <mem<0>> has been removed
+    Register <mem<4>> equivalent to <mem<0>> has been removed
+    Register <mem<5>> equivalent to <mem<0>> has been removed
+    Register <mem<6>> equivalent to <mem<0>> has been removed
+    Register <mem<7>> equivalent to <mem<0>> has been removed
+    Register <mem<8>> equivalent to <mem<0>> has been removed
+    Register <mem<9>> equivalent to <mem<0>> has been removed
+    Found 8-bit 16-to-1 multiplexer for signal <data_out_7_0$varindex0000> created at line 94.
+    Found 8-bit register for signal <mem<0>>.
+    Found 8-bit 15-to-1 multiplexer for signal <mem$mux0000> created at line 95.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred  16 Multiplexer(s).
+Unit <Memory_1> synthesized.
+
+
+Synthesizing Unit <Control>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Control.vhd".
+    Found 16x1-bit ROM for signal <reg_load>.
+    Summary:
+	inferred   1 ROM(s).
+Unit <Control> synthesized.
+
+
+Synthesizing Unit <Registers>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Registers.vhd".
+    Found 16-bit 16-to-1 multiplexer for signal <b_data>.
+    Found 16-bit 16-to-1 multiplexer for signal <c_data>.
+    Found 224-bit register for signal <REG<15:2>>.
+    Summary:
+	inferred 224 D-type flip-flop(s).
+	inferred  32 Multiplexer(s).
+Unit <Registers> synthesized.
+
+
+Synthesizing Unit <Signextend>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Signextend.vhd".
+Unit <Signextend> synthesized.
+
+
+Synthesizing Unit <mux2_1_1>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/mux2_1.vhd".
+Unit <mux2_1_1> synthesized.
+
+
+Synthesizing Unit <mux2_1_2>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/mux2_1.vhd".
+Unit <mux2_1_2> synthesized.
+
+
+Synthesizing Unit <Memory_2>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/Memory.vhd".
+WARNING:Xst:647 - Input <mem_dump> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <addr<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_0>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_10>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_1>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_11>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_2>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_12>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_3>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_13>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_4>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_14>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_5>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_15>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_6>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_7>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_8>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <data_out_9>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 8-bit 16-to-1 multiplexer for signal <data_out_7_0$varindex0000> created at line 94.
+    Found 128-bit register for signal <mem>.
+    Found 8-bit 15-to-1 multiplexer for signal <mem$mux0000> created at line 95.
+    Summary:
+	inferred 128 D-type flip-flop(s).
+	inferred  16 Multiplexer(s).
+Unit <Memory_2> synthesized.
+
+
+Synthesizing Unit <mux3_1>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/mux3_1.vhd".
+Unit <mux3_1> synthesized.
+
+
+Synthesizing Unit <full_adder>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/full_adder.vhd".
+    Found 1-bit xor2 for signal <Sout>.
+    Found 1-bit xor2 for signal <Cout$xor0000> created at line 31.
+Unit <full_adder> synthesized.
+
+
+Synthesizing Unit <and_gate>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/and_gate.vhd".
+Unit <and_gate> synthesized.
+
+
+Synthesizing Unit <or_gate>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/or_gate.vhd".
+Unit <or_gate> synthesized.
+
+
+Synthesizing Unit <MUX31>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/MUX31.vhd".
+Unit <MUX31> synthesized.
+
+
+Synthesizing Unit <ALU>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/ALU.vhd".
+    Found 1-bit xor2 for signal <NB>.
+Unit <ALU> synthesized.
+
+
+Synthesizing Unit <ALU_16Bit>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/ALU_16Bit.vhd".
+Unit <ALU_16Bit> synthesized.
+
+
+Synthesizing Unit <CPU_2214>.
+    Related source file is "E:/Backup/Document/GitHub/CSCE2214/Lab09/Lab08_Solution/CPU_2214.vhd".
+WARNING:Xst:647 - Input <mem_dump> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1780 - Signal <reg_src_mux_input3> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+WARNING:Xst:646 - Signal <cout> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
+    Found 16-bit adder for signal <pc_plus_2>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <CPU_2214> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x1-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 16-bit adder                                          : 1
+# Registers                                            : 32
+ 16-bit register                                       : 15
+ 8-bit register                                        : 17
+# Latches                                              : 16
+ 1-bit latch                                           : 16
+# Multiplexers                                         : 6
+ 16-bit 16-to-1 multiplexer                            : 2
+ 8-bit 15-to-1 multiplexer                             : 2
+ 8-bit 16-to-1 multiplexer                             : 2
+# Xors                                                 : 48
+ 1-bit xor2                                            : 48
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1290 - Hierarchical block <CPU_PC> is unconnected in block <CPU_2214>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <CPU_Instr_MEM> is unconnected in block <CPU_2214>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <CPU_Control_0> is unconnected in block <CPU_2214>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <CPU_Registers_0> is unconnected in block <CPU_2214>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <CPU_signextend_0> is unconnected in block <CPU_2214>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <CPU_reg_dest_mux> is unconnected in block <CPU_2214>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <CPU_alu_src_mux> is unconnected in block <CPU_2214>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <CPU_ALU_0> is unconnected in block <CPU_2214>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <CPU_MEM_0> is unconnected in block <CPU_2214>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <CPU_reg_src_mux> is unconnected in block <CPU_2214>.
+   It will be removed from the design.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x1-bit ROM                                          : 1
+# Adders/Subtractors                                   : 1
+ 16-bit adder                                          : 1
+# Registers                                            : 376
+ Flip-Flops                                            : 376
+# Latches                                              : 16
+ 1-bit latch                                           : 16
+# Multiplexers                                         : 50
+ 1-bit 15-to-1 multiplexer                             : 8
+ 1-bit 16-to-1 multiplexer                             : 40
+ 8-bit 15-to-1 multiplexer                             : 1
+ 8-bit 16-to-1 multiplexer                             : 1
+# Xors                                                 : 48
+ 1-bit xor2                                            : 48
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch mem_0_2 hinder the constant cleaning in the block Memory_1.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1426 - The value init of the FF/Latch mem_0_0 hinder the constant cleaning in the block Memory_1.
+   You should achieve better results by setting this init to 0.
+WARNING:Xst:1293 - FF/Latch <mem_0_0> has a constant value of 1 in block <Memory_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mem_0_1> has a constant value of 0 in block <Memory_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mem_0_2> has a constant value of 1 in block <Memory_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mem_0_3> has a constant value of 0 in block <Memory_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mem_0_4> has a constant value of 0 in block <Memory_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mem_0_5> has a constant value of 0 in block <Memory_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mem_0_6> has a constant value of 0 in block <Memory_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <mem_0_7> has a constant value of 0 in block <Memory_1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <CPU_PC/Output_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_PC/Output_15> of sequential type is unconnected in block <CPU_2214>.
+
+Optimizing unit <CPU_2214> ...
+
+Optimizing unit <Registers> ...
+
+Optimizing unit <Memory_2> ...
+
+Optimizing unit <ALU_16Bit> ...
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_9_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_8_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_7_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_15_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_6_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_14_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_5_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_13_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_4_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_12_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_3_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_11_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_2_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_Registers_0/REG_10_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_10> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_11> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_12> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_13> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_14> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_15> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_8> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/data_out_9> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_3_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_3_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_3_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_3_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_3_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_3_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_3_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_3_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_2_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_2_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_2_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_2_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_2_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_2_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_2_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_2_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_1_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_1_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_1_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_1_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_1_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_1_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_1_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_1_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_0_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_0_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_0_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_0_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_0_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_0_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_0_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_0_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_15_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_15_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_15_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_15_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_15_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_15_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_15_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_15_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_14_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_14_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_14_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_14_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_14_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_14_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_14_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_14_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_13_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_13_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_13_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_13_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_13_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_13_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_13_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_13_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_12_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_12_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_12_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_12_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_12_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_12_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_12_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_12_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_11_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_11_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_11_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_11_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_11_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_11_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_11_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_11_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_10_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_10_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_10_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_10_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_10_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_10_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_10_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_10_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_9_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_9_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_9_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_9_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_9_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_9_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_9_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_9_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_8_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_8_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_8_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_8_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_8_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_8_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_8_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_8_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_7_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_7_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_7_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_7_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_7_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_7_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_7_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_7_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_5_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_5_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_5_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_5_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_5_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_5_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_5_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_5_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_4_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_4_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_4_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_4_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_4_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_4_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_4_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_4_0> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_6_7> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_6_6> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_6_5> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_6_4> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_6_3> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_6_2> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_6_1> of sequential type is unconnected in block <CPU_2214>.
+WARNING:Xst:2677 - Node <CPU_MEM_0/mem_6_0> of sequential type is unconnected in block <CPU_2214>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CPU_2214, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : CPU_2214.ngr
+Top Level Output File Name         : CPU_2214
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 3
+
+Cell Usage :
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 5vlx30ff324-3 
+
+
+Slice Logic Utilization: 
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:      0
+   Number with an unused Flip Flop:       0  out of      0         
+   Number with an unused LUT:             0  out of      0         
+   Number of fully used LUT-FF pairs:     0  out of      0         
+   Number of unique control sets:         0
+
+IO Utilization: 
+ Number of IOs:                           3
+ Number of bonded IOBs:                   0  out of    220     0%  
+
+Specific Feature Utilization:
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.90 secs
+ 
+--> 
+
+Total memory usage is 308000 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  431 (   0 filtered)
+Number of infos    :    4 (   0 filtered)
+
